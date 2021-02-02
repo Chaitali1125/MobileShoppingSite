@@ -1,0 +1,12 @@
+<div class="container" style="max-width: 500px;">
+    <h2 class="text-center">Remove Phone</h2>
+    <form>
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="id" [(ngModel)]="id" placeholder={{id}} name="id" class="form-control" id="id" readonly>
+        </div>
+        <button class="btn btn-success" (click)="deleteProd(id)">Confirm delete</button>
+    </form>
+    <br>
+    <a routerLink="/admin" class="btn btn-outline-info">Back to home page</a>
+</div>

@@ -1,0 +1,68 @@
+<style>
+    .button {
+      background-color: #f44336;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 8px 20px;
+      ;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;   
+  }
+
+  .button1 {
+      background-color: #f44336;
+      color: black;
+      border-radius: 4px;
+  }
+</style>
+<div class="container" style="max-width: 500px;">
+    <div class="container row">
+        <div class="col-md-12">
+            <h1>Upload Image</h1>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <form>
+            <div class="form-group">
+                <label for="email">Name:</label>
+                <input type="email" [(ngModel)]="addProduct.name" placeholder="Name" name="name" class="form-control"
+                    id="name">
+            </div>
+            <div class="form-group">
+                <label for="age">Category:</label>
+                <input type="text" [(ngModel)]="addProduct.category" placeholder="Category" name="category"
+                    class="form-control" id="category">
+            </div>
+            <div class="form-group">
+                <label for="age">Price:</label>
+                <input type="number" [(ngModel)]="addProduct.price" placeholder="Price" name="price"
+                    class="form-control" id="price">
+            </div>
+            <div class="form-group">
+                <label for="age">Description:</label>
+                <input type="text" [(ngModel)]="addProduct.description" placeholder="Description" name="description"
+                    class="form-control" id="description">
+            </div>
+            <div class="form-group">
+                <input type="file" (change)="onFileChanged($event)">
+            </div>
+            <div class="form-group">
+                <input type="button" (click)="onUpload()" value="Upload">
+            </div>
+        </form>
+    </div>
+    <div class="container row">
+        <div class="col-md-12">
+            <div *ngIf=message>{{message}}</div>
+        </div>
+    </div>
+    <hr />
+     <br>
+    <a (click)="backToHome()" class="button button1">Back to home page</a>
+</div>

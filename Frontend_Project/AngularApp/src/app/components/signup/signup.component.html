@@ -1,0 +1,101 @@
+<h1>Create Account</h1>
+<div id="form-wrapper" style="max-width:500px;margin:auto;">
+  <!-- name:string='';
+	email:string='';
+	password:string='';  
+	phone:number=0;
+	dob:Date=new Date;
+	role:string='';
+	apartment:string='';
+	street:string='';
+	city:string='';
+	state:string='';
+	country:string='';
+	pin:number=0; -->
+  <form method="post">
+    <div class="required-field">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name<span class="required-field"></span></label>
+          <input [(ngModel)]="user.name" type="text" class="form-control" id="name" name="name" placeholder="Alex" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email<span class="required-field"></span></label>
+          <input [(ngModel)]="user.email"  type="email" class="form-control" id="email" name="email" placeholder="abc@gmail.com" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="dob">Date of birth<span class="required-field"></span></label>
+          <input [(ngModel)]="user.dob"  type="date" name="dob" class="form-control" placeholder="eg.01/01/2021" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="phone">Phone Number<span class="required-field"></span></label>
+          <input [(ngModel)]="user.phone" type="tel" name="phone" class="form-control" placeholder="eg.1234567891" maxlength="10" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="country">Country<span class="required-field"></span></label>
+          <input [(ngModel)]="user.country" type="text" name="country" id="country" class="form-control" placeholder="India" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="state">State<span class="required-field"></span></label>
+          <input [(ngModel)]="user.state" type="text" name="state" id="state" class="form-control" placeholder="Maharashtra" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="city">City<span class="required-field"></span></label>
+          <input [(ngModel)]="user.city" type="text" name="city" id="city" class="form-control" placeholder="Pune" required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="apartment">Apartment<span class="required-field"></span></label>
+          <input [(ngModel)]="user.apartment" type="text" name="apartment" id="apartment" class="form-control" placeholder="Pigasus tower 1"
+            required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="street">Street<span class="required-field"></span></label>
+          <input [(ngModel)]="user.street" type="text" name="street" id="street" class="form-control" name="street" placeholder="MG road"
+            required>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="pin">Pin<span class="required-field"></span></label>
+          <input [(ngModel)]="user.pin" type="text" name="pin" id="pin" name="pin" class="form-control" placeholder="eg:42163" required>
+        </div><br>
+        <br>
+        <br>
+
+        <div class="form-group col-md-6">
+          <label for="role">Role<span class="required-field"></span></label>
+          <input [(ngModel)]="user.role" type="text" class="form-control" id="role" name="role" placeholder="Admin/Buyer" required>
+        </div>
+
+        <!-- <div class="form-group col-md-6">
+          <label for="role">Role<span class="required-field"></span></label>
+          <select [(ngModel)]="user.role" type="role" id="role" class="form-control">
+            <option [ngValue]="">Select Role</option>
+            <option [ngValue]="'BUYER'">Buyer</option>
+            <option [ngValue]="'ADMIN'">Admin</option>
+          </select>
+        </div> -->
+
+        <div class="form-group col-md-6">
+          <label for="password">Password<span class="required-field"></span></label>
+          <input [(ngModel)]="user.password" type="password" class="form-control" id="password" name="password" placeholder="1234" required>
+        </div><br><br>
+
+        <hr>
+        <p style="text-align: center;">By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <input type="submit" class="btn btn-success" (click)="register()" value="Submit">
+
+        <p>Already have an account? <a href="login">Sign in</a>.</p>
+
+      </div>
+    </div>
+  </form>
+</div>

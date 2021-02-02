@@ -1,0 +1,45 @@
+<style>
+  .button {
+    background-color: #f44336;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: #f44336;
+    color: black;
+    border-radius: 4px;
+  }
+</style>
+<div>
+  <div >
+    <button type="button" (click)="addToWallet()" style="color:#ffff;margin-left:auto;margin-right:auto;display:block;"
+      class="button button1">View Wallet</button>
+  </div>
+  <div>
+    <button type="button" (click)="getAllCartItem()"
+      style="color:#ffff;margin-left:auto;margin-right:auto;display:block;" class="button button1">View Cart</button>
+  </div>
+</div>
+
+<div class="row">
+  <div style="max-width:500px;" class="col-md-4" *ngFor="let product of productList">
+    <app-product-item [productItem]="product"></app-product-item>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div style="max-width:500px;" class="col-md-4" *ngFor="let product of productList">
+    <app-product-item [imageItem]="getAllImages()"></app-product-item>
+  </div>
+</div> -->

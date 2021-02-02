@@ -1,0 +1,15 @@
+<div class="container" style="max-width: 500px;">
+    <h2 class="text-center">Confirm Order</h2>
+    <form>
+        <button class="btn btn-success" (click)="placeOrder()">Confirm</button>
+    </form>
+    <br>
+    <div class="container row">
+        <div class="col-md-12">
+            <div *ngIf=ordered>
+                <h3>{{ordered}}</h3>
+            </div>
+        </div>
+    </div>
+    <a routerLink="/mycart" class="btn btn-outline-info">Back to home page</a>
+</div>
